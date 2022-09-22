@@ -93,6 +93,7 @@ label {
 .form-item {
   display: flex;
   width: 40%;
+  max-width: 475px;
   justify-content: space-between;
 }
 form {
