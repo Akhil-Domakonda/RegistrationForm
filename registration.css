@@ -68,7 +68,8 @@ main {
 .buttons-wraper {
   display: flex;
   justify-content: space-evenly;
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 30px;
 }
 
 .buttons-wraper button {
@@ -92,9 +93,10 @@ label {
 }
 .form-item {
   display: flex;
-  width: 40%;
+  width: 100%;
   max-width: 475px;
   justify-content: space-between;
+  /* background-color: #ffd300; */
 }
 form {
   margin: 50px 10px;
@@ -104,7 +106,7 @@ select {
   width: 250px;
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid #ffffffb3;
+  border: 2px solid #ffffff;
   background-color: #ffffffb3;
   box-sizing: border-box;
   color: #555;
@@ -112,13 +114,33 @@ select {
 }
 
 input:focus {
-  border: 2px solid #ffd300;
+  border: 2px solid #ffd300 !important;
   outline: none;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 .required {
   display: none;
   font-size: 14px;
+  text-align: center;
+  color: red;
+  font-weight: 600;
+  /* padding-top: 2px 1px 2px 1px; */
+  padding: 2px;
+  /* border: 1px solid red; */
+}
+
+.required-wraper {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 1320px) {
@@ -154,6 +176,9 @@ input:focus {
   .buttons-wraper button {
     margin-bottom: 15px;
   }
+  .required {
+    padding-bottom: 15px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -167,6 +192,9 @@ input:focus {
 
   .form-wraper {
     width: 75%;
+  }
+  .required {
+    padding-bottom: 15px;
   }
 }
 

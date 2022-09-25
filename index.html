@@ -14,15 +14,6 @@
     <title>Registration form</title>
   </head>
   <body>
-    <!-- <header>
-      <div class="logo">
-        <div class="logo-icon">
-          <img src="https://uspto.report/TM/90272735/mark.png" alt="" />
-        </div>
-        <div class="logo-title">DevRev</div>
-      </div>
-    </header> -->
-
     <main>
       <div class="form-wraper">
         <div class="title">Employee Registration Form</div>
@@ -32,7 +23,6 @@
               <div>
                 <label for="fname">First Name</label>
               </div>
-              <span class="required">*required</span>
               <input
                 type="text"
                 name="fname"
@@ -56,11 +46,10 @@
 
           <div class="contact-wraper wraper-item">
             <div class="contactNumber-wraper form-item">
-              <label for="contactNumber">Contact Number</label
-              ><span class="required">*required</span>
+              <label for="contactNumber">Contact Number</label>
               <input
                 pattern="[0-9]{10}"
-                type="text"
+                type="number"
                 name="contactNumber"
                 id="contactNumber"
                 placeholder="Contact Number"
@@ -180,6 +169,16 @@
                 />
               </div>
             </div>
+            <div class="required" id="fname-required"></div>
+            <div class="required" id="lname-required"></div>
+            <div class="required" id="contactNumber-required"></div>
+            <div class="required" id="mail-required"></div>
+            <div class="required" id="gender-required"></div>
+            <div class="required" id="dob-required"></div>
+            <div class="required" id="line1-required"></div>
+            <div class="required" id="line2-required"></div>
+            <div class="required" id="state-required"></div>
+            <div class="required" id="postalCode-required"></div>
             <div class="buttons-wraper wraper-item">
               <button type="reset" id="reset">Reset</button>
               <button type="submit" id="submit">Submit</button>
